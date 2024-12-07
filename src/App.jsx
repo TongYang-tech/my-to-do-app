@@ -21,6 +21,16 @@ const App = () => {
     setTodos(updatedToDos);
   };
 
+  const changeToDo = (id, title, completed) => {
+    const updatedToDos = todos.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, title, completed };
+      }
+      return todos;
+    });
+    setTodos(updatedToDos);
+  };
+
   return (
     <>
       <main className="main">
