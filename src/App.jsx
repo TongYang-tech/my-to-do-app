@@ -37,8 +37,8 @@ const App = () => {
         <h1>
           React Todo <span>Streamline Your Day, the React Way!</span>
         </h1>
-        <TodoList />
-        <TodoCreate />
+        <TodoList todos={todos} removeTodo={removeToDo} changeToDo={changeToDo} />
+        <TodoCreate createToDo={createToDo} />
       </main>
     </>
   )
