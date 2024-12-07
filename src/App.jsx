@@ -1,47 +1,42 @@
-import { useState } from 'react';
-import TodoList from './components/TodoList.jsx';
-import TodoCreate from './components/TodoCreate.jsx';
+import TodoList from './components/TodoList';
+import TodoCreate from './components/TodoCreate';
 import './App.css';
+import { useState } from 'react';
 
 const App = () => {
   const [todos, setTodos] = useState([]);
 
-  const createToDo = (title) => {
-    const newToDo = {
-      id: crypto.randomUUID(),
-      title: title,
-      completed: false
-    };
-    const updatedToDos = [...todos, newToDo];
-    setTodos(updatedToDos);
+  const createTodo = (title) => {
+    const newTodo = { id: crypto.randomUUID(), title, completed: false };
+    const updatedTodos = [...todos, newTodo];
+    setTodos(updatedTodos);
   };
 
-  const removeToDo = (id) => {
-    const updatedToDos = todos.filter((todo) => todo.id !== id);
-    setTodos(updatedToDos);
+  const removeTodo = (id) => {
+    const updatedTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(updatedTodos);
   };
 
-  const changeToDo = (id, title, completed) => {
-    const updatedToDos = todos.map((todo) => {
+  const changeTodo = (id, title, completed = false) => {
+    const updatedTodos = todos.map((todo) => {
       if (todo.id === id) {
         return { ...todo, title, completed };
       }
-      return todos;
+      return todo;
     });
-    setTodos(updatedToDos);
+
+    setTodos(updatedTodos);
   };
 
   return (
-    <>
-      <main className="main">
-        <h1>
-          React Todo <span>Streamline Your Day, the React Way!</span>
-        </h1>
-        <TodoList todos={todos} removeTodo={removeToDo} changeToDo={changeToDo} />
-        <TodoCreate createToDo={createToDo} />
-      </main>
-    </>
-  )
+    <main className="main">
+      <h1>
+        React Todo <span>Streamline Your Day, the React Way!</span>
+      </h1>
+      <TodoList todos={todos} removeTodo={removeTodo} changeTodo={changeTodo} />
+      <TodoCreate createTodo={createTodo} />
+    </main>
+  );
 };
 
 export default App;

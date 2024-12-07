@@ -1,21 +1,18 @@
-/* eslint-disable react/prop-types */
-import TodoShow from './TodoShow.jsx';
+import TodoShow from './TodoShow';
 
-const TodoList = ({ todos, removeTodo, changeToDo }) => {
+const TodoList = ({ todos, removeTodo, changeTodo }) => {
   const renderedTodos = todos.map((todo) => {
-    <TodoShow
-      key={todos.id}
-      todo={todo}
-      removeToDo={removeTodo}
-      changeToDo={changeToDo}
-    />
+    return (
+      <TodoShow
+        key={todo.id}
+        todo={todo}
+        removeTodo={removeTodo}
+        changeTodo={changeTodo}
+      />
+    );
   });
 
-  return (
-    <>
-      <ul className="todo-list">{renderedTodos}</ul>
-    </>
-  );
+  return <ul className="todo-list">{renderedTodos}</ul>;
 };
 
 export default TodoList;

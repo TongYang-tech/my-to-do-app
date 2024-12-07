@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const TodoCreate = (createToDo) => {
+const TodoCreate = ({ createTodo }) => {
   const [title, setTitle] = useState('');
 
   const handleChange = (e) => {
@@ -9,23 +9,21 @@ const TodoCreate = (createToDo) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    createToDo(title);
+    createTodo(title);
     setTitle('');
   };
 
   return (
-    <>
-      <form onSubmit={handleSubmit} className="todo-create">
-        <input
-          type="text"
-          name="title"
-          id="title"
-          placeholder="Add a Task"
-          value={title}
-          onChange={handleChange}
-        />
-      </form>
-    </>
+    <form onSubmit={handleSubmit} className="todo-create">
+      <input
+        type="text"
+        name="title"
+        id="title"
+        placeholder="Enter a todo"
+        value={title}
+        onChange={handleChange}
+      />
+    </form>
   );
 };
 
