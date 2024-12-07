@@ -1,8 +1,26 @@
+import { useState } from 'react';
 import TodoList from './components/TodoList.jsx';
 import TodoCreate from './components/TodoCreate.jsx';
 import './App.css';
 
 const App = () => {
+  const [todos, setTodos] = useState([]);
+
+  const createToDo = (title) => {
+    const newToDo = {
+      id: crypto.randomUUID(),
+      title: title,
+      completed: false
+    };
+    const updatedToDos = [...todos, newToDo];
+    setTodos(updatedToDos);
+  };
+
+  const removeToDo = (id) => {
+    const updatedToDos = todos.filter((todo) => todo.id !== id);
+    setTodos(updatedToDos);
+  };
+
   return (
     <>
       <main className="main">
