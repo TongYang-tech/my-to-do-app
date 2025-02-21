@@ -21,9 +21,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <!-- <a href="https://github.com/TongYang-tech/To-Do">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a> -->
+  <a href="https://github.com/TongYang-tech/To-Do">
+    <img src="./app.png" alt="Logo" width="250" height="250">
+  </a>
 
 <h3 align="center">My To-Do App</h3>
 
