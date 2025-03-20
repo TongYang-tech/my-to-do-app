@@ -1,28 +1,26 @@
 {
-  "name": "My To-Do App",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "my-to-do-app",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "setup": "npm install && cd ./server && npm run setup && cd ../client && npm run setup",
+    "client": "cd ./client && npm run setup && npm run start",
+    "server": "cd ./server && npm run setup && npm run start",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TongYang-tech/my-to-do-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TongYang-tech/my-to-do-app/issues"
+  },
+  "homepage": "https://github.com/TongYang-tech/my-to-do-app#readme",
+  "description": "",
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.20.0",
-    "@types/react": "^19.0.12",
-    "@types/react-dom": "^19.0.4",
-    "@vitejs/plugin-react-swc": "^3.5.0",
-    "eslint": "^9.15.0",
-    "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.14",
-    "globals": "^16.0.0",
-    "vite": "^6.0.1"
+    "concurrently": "^9.1.2"
   }
 }
