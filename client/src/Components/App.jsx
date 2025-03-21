@@ -1,43 +1,24 @@
-import { useState } from 'react'
-import Create from './Create'
-import List from './List'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 
 const App = () => {
-  const [todos, setTodos] = useState([])
-  console.log(todos)
-  const createTodo = (content) => {
-    const newTodo = {
-      id: crypto.randomUUID(),
-      content: content,
-      completed: false
-    }
-    const updateTodo = [...todos, newTodo]
-    setTodos(updateTodo)
-  }
+  const [data, setData] = useState(null)
 
-  const removeToDo = (id) => {
-    const updateTodo = todos.filter((todo) => todo.id !== id)
-    setTodos(updateTodo)
-  }
-
-  const editTodo = (id, content, completed = false) => {
-    const updateTodo = todos.map((todo) => {
-      if (todo.id === id) {
-        return { ...todo, content, completed }
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:3000/')
+        const json = response.data
+        setData(json)
+      } catch (err) {
+        console.error(err)
       }
-      return todo
-    })
-    setTodos(updateTodo)
-  }
+    }
+    fetchData()
+  }, [])
 
   return (
-    <main className='mainContainer'>
-      <h1>
-        Daily Tasks
-      </h1>
-      <Create create={createTodo} />
-      <List items={todos} remove={removeToDo} edit={editTodo} />
-    </main>
+    <p>{data}</p>
   )
 }
 
