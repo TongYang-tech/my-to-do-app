@@ -1,24 +1,16 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios'
+import { useState } from 'react'
+import { Container, FormControl, Input, InputLabel } from '@mui/material'
 
 const App = () => {
-  const [data, setData] = useState(null)
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('http://localhost:3000/')
-        const json = response.data
-        setData(json)
-      } catch (err) {
-        console.error(err)
-      }
-    }
-    fetchData()
-  }, [])
+  const [title, setTitle] = useState('')
 
   return (
-    <p>{data}</p>
+    <Container>
+      <FormControl>
+        <InputLabel>Add a task</InputLabel>
+        <Input type='text' value={title}/>
+      </FormControl>
+    </Container>
   )
 }
 
