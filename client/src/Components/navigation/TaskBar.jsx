@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { Container, TextField } from '@mui/material'
 
+import '../../styles/Task.scss'
+
 const TaskBar = () => {
   const [title, setTitle] = useState('')
 
@@ -14,10 +16,10 @@ const TaskBar = () => {
   }
 
   return (
-    <Container className='inputContainer' maxWidth='lg'>
+    <Container className='TaskContainer' maxWidth='lg'>
       <form onSubmit={handleSubmit}>
         <TextField
-          className='inputItem'
+          className='TaskBarInput'
           label='Add a task'
           onChange={handleChange}
           placeholder='Title'
