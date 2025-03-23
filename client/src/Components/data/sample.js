@@ -7,7 +7,7 @@ const dataJSON = [
   {
     id: 2,
     title: "task B",
-    complete: true
+    complete: false
   },
   {
     id: 3,
@@ -17,8 +17,8 @@ const dataJSON = [
   {
     id: 4,
     title: "task D",
-    compete: true
+    compete: false
   },
 ]
 
-export default dataJson
+export default dataJSON

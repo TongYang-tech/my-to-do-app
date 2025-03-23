@@ -1,8 +1,6 @@
 import { useState } from 'react'
 import { Container, TextField } from '@mui/material'
 
-import '../../styles/Task.scss'
-
 const TaskBar = () => {
   const [title, setTitle] = useState('')
 
