@@ -3,10 +3,11 @@ import {
   List,
   ListItem,
   ListItemText,
-  ListItemButton,
   ListItemIcon,
   Checkbox
 } from '@mui/material'
+import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked'
+import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
 import dataJSON from '../data/sample'
 
 const TaskList = () => {
@@ -15,7 +16,11 @@ const TaskList = () => {
     return (
       <ListItem className='TaskItem' key={item.id}>
         <ListItemIcon>
-          <Checkbox />
+          <Checkbox
+            icon={<RadioButtonUncheckedIcon />}
+            checkedIcon={<RadioButtonCheckedIcon />}
+            size='medium'
+          />
         </ListItemIcon>
         <ListItemText primary={item.title} />
       </ListItem>

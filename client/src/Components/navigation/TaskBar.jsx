@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Container, TextField } from '@mui/material'
+import { Container, TextField, Box } from '@mui/material'
+import AddTaskIcon from '@mui/icons-material/AddTask'
 
 const TaskBar = () => {
   const [title, setTitle] = useState('')
@@ -15,17 +16,22 @@ const TaskBar = () => {
 
   return (
     <Container className='TaskContainer' maxWidth='lg'>
-      <form onSubmit={handleSubmit}>
-        <TextField
-          className='TaskBarInput'
-          label='Add a task'
-          onChange={handleChange}
-          placeholder='Title'
-          size='small'
-          type='text'
-          value={title}
-        />
-      </form>
+      <Box className='TaskItem'>
+        <AddTaskIcon fontSize='large'/>
+      </Box>
+      <Box className='TaskItem'>
+        <form onSubmit={handleSubmit}>
+          <TextField
+            className='TaskBarInput'
+            label='Add a task'
+            onChange={handleChange}
+            placeholder='Title'
+            size='small'
+            type='text'
+            value={title}
+          />
+        </form>
+      </Box>
     </Container>
   )
 }
