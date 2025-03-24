@@ -30,7 +30,6 @@
     "javascript": "javascriptreact",
     "typescript": "typescriptreact"
   },
-  "errorLens.enabled": true,
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 500,
   "files.defaultLanguage": "${activeEditorLanguage}",
@@ -65,7 +64,6 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "redhat.telemetry.enabled": false,
   "typescript.suggest.paths": false,
   "javascript.suggest.paths": false
 }

@@ -4,10 +4,12 @@ import {
   ListItem,
   ListItemText,
   ListItemIcon,
-  Checkbox
+  Checkbox,
+  IconButton
 } from '@mui/material'
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked'
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
+import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined'
 import dataJSON from '../data/sample'
 
 const TaskList = () => {
@@ -23,6 +25,9 @@ const TaskList = () => {
           />
         </ListItemIcon>
         <ListItemText primary={item.title} />
+        <IconButton>
+          <DeleteOutlinedIcon />
+        </IconButton>
       </ListItem>
     )
   })

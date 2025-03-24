@@ -2,8 +2,9 @@ import { useState } from 'react'
 import { Container, TextField, Box } from '@mui/material'
 import AddTaskIcon from '@mui/icons-material/AddTask'
 
-const TaskBar = () => {
+const TaskBar = (props) => {
   const [title, setTitle] = useState('')
+  const { createTitle } = props
 
   const handleChange = (event) => {
     setTitle(event.target.value)
@@ -11,6 +12,7 @@ const TaskBar = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
+    createTitle(title)
     setTitle('')
   }
 
