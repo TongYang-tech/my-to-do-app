@@ -1,33 +1,12 @@
-import {
-  Container,
-  List,
-  ListItem,
-  ListItemText,
-  ListItemIcon,
-  Checkbox,
-  IconButton
-} from '@mui/material'
-import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked'
-import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
-import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined'
+import { Container, List } from '@mui/material'
+import Task from './Task'
 
 const TaskList = (props) => {
-  const { Titles } = props
-  const displayItems = Titles.map((item) => {
+  const { Titles, deleteTitle } = props
+
+  const displayItems = Titles.map((title) => {
     return (
-      <ListItem className='TaskItem' key={item.id}>
-        <ListItemIcon>
-          <Checkbox
-            icon={<RadioButtonUncheckedIcon />}
-            checkedIcon={<RadioButtonCheckedIcon />}
-            size='medium'
-          />
-        </ListItemIcon>
-        <ListItemText primary={item.title} />
-        <IconButton>
-          <DeleteOutlinedIcon />
-        </IconButton>
-      </ListItem>
+      <Task key={title.id} title={title} deleteTitle={deleteTitle} />
     )
   })
 

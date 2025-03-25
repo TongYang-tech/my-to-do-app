@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "proxy": "http://localhost:8080",
   "scripts": {
     "setup": "npm install",
     "start": "vite",
@@ -26,11 +27,11 @@
     "@types/react": "^19.0.12",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react-swc": "^3.5.0",
-    "eslint": "^9.15.0",
+    "eslint": "^9.23.0",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^16.0.0",
-    "vite": "^6.0.1"
+    "vite": "^6.2.3"
   }
 }

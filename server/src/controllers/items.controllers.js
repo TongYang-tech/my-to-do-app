@@ -21,3 +21,14 @@ export const createItem = (req, res) => {
     res.status(500).json({ error: 'Database Error: ' + err })
   }
 }
+
+export const deleteItem = (req, res) => {
+  const { id } = req.params
+  try {
+    const stmt = db.prepare("DELETE FROM todos WHERE id IN (?)");
+    const result = stmt.run([id]);
+    res.status(204).json("No content");
+  } catch (err) {
+    res.status(500).json({ error: 'Database Error' + err })
+  }
+}

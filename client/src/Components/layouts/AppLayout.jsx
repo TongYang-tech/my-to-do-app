@@ -30,6 +30,15 @@ const AppLayout = () => {
     setTitleData([...titleData, data])
   }
 
+  const deleteTitle = async (id) => {
+    await axios({
+      method: 'delete',
+      url: `http://localhost:8080/todo-api/v1/items/${id}`
+    })
+    const updateTitleData = titleData.filter((title) => title.id !== id)
+    setTitleData(updateTitleData)
+  }
+
   useEffect(() => {
     getTitleList()
   }, [])
@@ -37,7 +46,7 @@ const AppLayout = () => {
   return (
     <>
       <TaskBar createTitle={createTitle} />
-      <TaskList Titles={titleData} />
+      <TaskList Titles={titleData} deleteTitle={deleteTitle}/>
     </>
   )
 }
