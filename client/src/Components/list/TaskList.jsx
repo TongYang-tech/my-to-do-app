@@ -10,11 +10,10 @@ import {
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked'
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined'
-import dataJSON from '../data/sample'
 
-const TaskList = () => {
-
-  const displayItems = dataJSON.map((item) => {
+const TaskList = (props) => {
+  const { Titles } = props
+  const displayItems = Titles.map((item) => {
     return (
       <ListItem className='TaskItem' key={item.id}>
         <ListItemIcon>

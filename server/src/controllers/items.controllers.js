@@ -2,11 +2,11 @@ import { db } from '../db/database.js'
 
 export const getAllItems = (_req, res) => {
   try {
-    const stmt = db.prepare("SELECT id, title, completed from todos");
-    const result = stmt.all();
-    res.status(200).json(result);
+    const stmt = db.prepare("SELECT id, title, completed from todos")
+    const result = stmt.all()
+    res.status(200).json(result)
   } catch (err) {
-    res.status(500).json({ error: "Database Error: " + err });
+    res.status(500).json({ error: "Database Error: " + err })
   }
 }
 

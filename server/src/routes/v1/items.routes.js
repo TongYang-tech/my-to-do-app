@@ -10,8 +10,8 @@ itemsRouter.get('/', getAllItems)
 
 itemsRouter.post('/new', createItem)
 
-itemsRouter.delete("/:id", (req, res) => {
-  res.status(201).json("remove item");
+itemsRouter.delete('/:id', (req, res) => {
+  res.status(201).json('remove item')
 })
 
 export default itemsRouter
