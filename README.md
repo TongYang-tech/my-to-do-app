@@ -22,21 +22,13 @@
 <br />
 <div align="center">
   <a href="https://github.com/TongYang-tech/To-Do">
-    <img src="./app.png" alt="Logo" width="250" height="250">
+    <img src="./app.png" alt="Logo" width="400" height="400">
   </a>
-
 <h3 align="center">My To-Do App</h3>
-
   <p align="center">
     A small web application to organize daily tasks
-    <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
   </p>
 </div>
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -63,14 +55,12 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
-- [![React][React.js]][React-url]
-- [![Vite][Vite.js]][Vite-url]
+[![React][React.js]][React-url]
+[![Vite][Vite.js]][Vite-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

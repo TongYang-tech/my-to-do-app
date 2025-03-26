@@ -16,7 +16,7 @@ const Task = (props) => {
   }
 
   return (
-    <ListItem className='TaskItem' key={title.id}>
+    <ListItem className='TaskListItemContainer' key={title.id}>
       <ListItemIcon>
         <Checkbox
           icon={<RadioButtonUncheckedIcon />}

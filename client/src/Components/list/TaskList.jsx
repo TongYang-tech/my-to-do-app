@@ -11,8 +11,8 @@ const TaskList = (props) => {
   })
 
   return (
-    <Container className='TaskListContainer'>
-      <List className='TaskList'>
+    <Container maxWidth='sm'>
+      <List>
         {displayItems}
       </List>
     </Container>

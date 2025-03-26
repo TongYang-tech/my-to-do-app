@@ -5,8 +5,9 @@
   "scripts": {
     "setup": "npm install && cd ./server && npm run setup && cd ../client && npm run setup",
     "client": "cd ./client && npm run setup && npm run start",
-    "server": "cd ./server && npm run setup && npm run start",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "server": "cd ./server && npm run setup && npm run watch",
+    "dev": "concurrently \"cd ./server && npm run watch\" \"cd ./client && npm run watch\"",
+    "start": "cd ./server && npm run start && cd ../client && npm run start"
   },
   "repository": {
     "type": "git",

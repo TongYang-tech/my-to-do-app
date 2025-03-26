@@ -17,11 +17,11 @@ const TaskBar = (props) => {
   }
 
   return (
-    <Container className='TaskContainer' maxWidth='lg'>
-      <Box className='TaskItem'>
-        <AddTaskIcon fontSize='large'/>
+    <Container className='TaskBarContainer' maxWidth='sm'>
+      <Box className='TaskBarItem'>
+        <AddTaskIcon fontSize='large' />
       </Box>
-      <Box className='TaskItem'>
+      <Box className='TaskBarItem'>
         <form onSubmit={handleSubmit}>
           <TextField
             className='TaskBarInput'
