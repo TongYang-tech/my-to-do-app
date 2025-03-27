@@ -21,9 +21,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/TongYang-tech/To-Do">
-    <img src="./app.png" alt="Logo" width="400" height="400">
-  </a>
 <h3 align="center">My To-Do App</h3>
   <p align="center">
     A small web application to organize daily tasks
@@ -46,7 +43,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -70,33 +66,29 @@
 
 ### Prerequisites
 
-- npm
-  ```sh
-  npm install npm@latest -g
-  ```
+```sh
+npm install npm@latest -g
+```
 
 ### Installation
 
 1. Clone the repo
+
    ```sh
    git clone git@github.com:TongYang-tech/To-Do.git
    ```
+
 2. Install NPM packages
+
    ```sh
-   npm install
+   npm run setup
    ```
+
 3. Run the app
+
    ```sh
    npm run dev
    ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- USAGE EXAMPLES -->
-
-## Usage
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
